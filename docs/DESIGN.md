@@ -253,7 +253,8 @@ Fehlermeldungen enthalten nur Status und Pfad, nie den Antworttext, wie bei Lexw
 
 `GET /Contact` filtert nur nach `customerNumber`. Eine Namenssuche wie bei Lexware gibt es nicht. Vorgehen:
 
-1. Kontakte seitenweise laden (sofern Paging greift, V4), mit Cache im Prozessspeicher.
+1. Kontakte seitenweise laden (sofern Paging greift, V4), mit Cache im Prozessspeicher. **Belegt am Testkonto:** `GET /Contact` ohne `depth` liefert nur Firmen (154 von 255). Personen fehlen dann vollständig. Mit `depth=20` kommen alle 255 Kontakte. Der Connector setzt `depth` deshalb immer explizit und prüft die Anzahl gegen `countAll`.
+   Außerdem: Beim Anlegen per API hat sevDesk die übergebene `customerNumber` nicht übernommen (vergab fortlaufende Nummern). Adressen und Kommunikationswege werden über eigene Endpunkte angelegt und hängen am Kontakt. Beim Löschen eines Kontakts bleiben sie nicht automatisch weg, sie müssen geprüft werden.
 2. Lokal nach `name`, `surename`, `familyname` und `name2` filtern.
 3. Nur Pseudonym und Anzahl ausgeben, wie Lexware.
 
