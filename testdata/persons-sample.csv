@@ -1,0 +1,11 @@
+Kunden-Nr.;Anrede;Titel;Nachname;Vorname;Organisation;Namenszusatz;Position;Kategorie;IBAN;BIC;Umsatzsteuer-ID;Strasse;PLZ;Ort;Land;Adress-Kategorie;Telefon;Telefon-Kategorie;Mobil;Fax;E-Mail;E-Mail-Kategorie;Webseite;Webseiten-Kategorie;Beschreibung;Geburtstag;Tags;Debitoren-Nr;Kreditoren-Nr.;Leitweg-ID / Leitwegsnummer;Steuernummer;Skonto Tage;Skonto Prozent;Zahlungsziel Tage;Kundenrabatt;Ist Kundenrabatt prozentual
+TP-0001;;;Demo;Ayşe;;;;Kunde;;;;Fiktivplatz 59;80331;München;Deutschland;;+49 000 4223998;;;;ayse.001@example.com;;;;Privatkunde, Testdatensatz;;;;;;;;;;;
+TP-0002;;;Zwick;Walter;;;;Kunde;;;;Dummyring 80;30159;Hannover;Deutschland;;+49 000 9643153;;;;walter.002@example.com;;;;Privatkunde, Testdatensatz;;;;;;;;;;;
+TP-0003;;;Ruppert;Vera;;;;Kunde;;;;Platzhalterweg 22;28195;Bremen;Deutschland;;+49 000 5782448;;;;vera.003@example.com;;;;Privatkunde, Testdatensatz;;;;;;;;;;;
+TP-0004;;;Ilgaz;Björn;;;;Kunde;;;;Testgasse 87;10115;Berlin;Deutschland;;+49 000 9193482;;;;bjoern.004@example.com;;;;Privatkunde, Testdatensatz;;;;;;;;;;;
+TP-0005;;;Pfeiffer;Quirin;;;;Kunde;;;;Beispielstraße 81;80331;München;Deutschland;;+49 000 9784338;;;;quirin.005@example.com;;;;Privatkunde, Testdatensatz;;;;;;;;;;;
+TP-0006;;;Fuchs;Ilse;;;;Kunde;;;;Musterweg 55;28195;Bremen;Deutschland;;+49 000 1189982;;;;ilse.006@example.com;;;;Privatkunde, Testdatensatz;;;;;;;;;;;
+TP-0007;;;Ilgaz;Karla;;;;Kunde;;;;Musterweg 46;44135;Dortmund;Deutschland;;+49 000 4562980;;;;karla.007@example.com;;;;Privatkunde, Testdatensatz;;;;;;;;;;;
+TP-0008;;;Krämer;Rita;;;;Kunde;;;;Musterweg 62;80331;München;Deutschland;;+49 000 7122141;;;;rita.008@example.com;;;;Privatkunde, Testdatensatz;;;;;;;;;;;
+TP-0009;;;Fuchs;Nico;;;;Kunde;;;;Dummyring 43;10115;Berlin;Deutschland;;+49 000 2900355;;;;nico.009@example.com;;;;Privatkunde, Testdatensatz;;;;;;;;;;;
+TP-0010;;;Ilgaz;Quirin;;;;Kunde;;;;Probeallee 59;28195;Bremen;Deutschland;;+49 000 1703885;;;;quirin.010@example.com;;;;Privatkunde, Testdatensatz;;;;;;;;;;;
