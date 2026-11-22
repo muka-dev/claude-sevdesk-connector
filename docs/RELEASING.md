@@ -6,6 +6,8 @@
 3. Der Workflow `publish.yml` führt Typecheck, Tests und Build aus und veröffentlicht mit Herkunftsangabe (Provenance) auf npm.
 4. Im Reiter „Actions“ prüfen, dass der Lauf grün ist, und mit `npm view <paketname> version` die Version kontrollieren.
 
+**Das README auf npmjs.com ist das des veröffentlichten Pakets.** Änderungen am README sind dort erst nach einer neuen Version sichtbar, deshalb gehört auch eine reine README-Korrektur in eine Patch-Version.
+
 Veröffentlichte Versionen lassen sich nicht überschreiben und nach kurzer Zeit nicht mehr zurückziehen. Vor einem Release den Paketinhalt mit `npm pack --dry-run` ansehen.
 
 ## Zugang: aktueller Stand

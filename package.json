@@ -1,6 +1,6 @@
 {
   "name": "claude-sevdesk-connector",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Read-only MCP connector for sevDesk: contacts, invoices and evaluations for Claude.",
   "license": "MIT",
   "type": "module",
@@ -31,7 +31,7 @@
     "model-context-protocol"
   ],
   "author": "m-ko.de",
-  "homepage": "https://m-ko.de",
+  "homepage": "https://m-ko.de/connectors/sevdesk/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/muka-dev/claude-sevdesk-connector.git"
@@ -45,5 +45,8 @@
     "@vitest/coverage-v8": "^4.1.12",
     "typescript": "^5.9.3",
     "vitest": "^4.1.12"
+  },
+  "bugs": {
+    "url": "https://github.com/muka-dev/claude-sevdesk-connector/issues"
   }
 }
