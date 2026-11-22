@@ -130,6 +130,7 @@ SEVDESK_TOKEN=... node scripts/live-check.mjs 2026-01-01 2026-12-31
 - [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md): Fehlerbilder und Lösungen
 - [docs/DESIGN.md](docs/DESIGN.md): Systemdesign mit Belegstatus und API-Befunden
 - [docs/TESTING.md](docs/TESTING.md): Teststrategie
+- [docs/RELEASING.md](docs/RELEASING.md): Veröffentlichen auf npm, Zugang und geplante Umstellung
 
 ## Lizenz
 
