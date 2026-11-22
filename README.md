@@ -7,7 +7,7 @@ Ein MCP-Connector, mit dem Claude Rechnungen, Gutschriften, Kunden und Auswertun
 - **Standardmäßig datensparsam.** Namen werden durch Platzhalter ersetzt, Adressen und Steuer-IDs entfernt, kleine Gruppen ausgeblendet.
 - **Kostenlos, MIT-lizenziert.**
 
-> **Status: Prototyp (v0.1).** Getestet an einem sevDesk-Testkonto (Kleinunternehmer, rund 60 Testbelege). Noch nicht auf npm veröffentlicht. Stornorechnungen sind noch nicht berücksichtigt (geplant für v0.3).
+> **Status: Prototyp (v0.1).** Getestet an einem sevDesk-Testkonto (Kleinunternehmer, rund 60 Testbelege). Auf npm veröffentlicht (Version 0.1.0). Stornorechnungen sind noch nicht berücksichtigt (geplant für v0.3).
 
 > **Wichtig:** Was Claude aus dem Connector erhält, geht an den Modell-Anbieter, sobald Claude es verarbeitet. Der Connector verringert, was dabei an Personendaten übertragen wird. Er macht die Daten nicht anonym. Details: [docs/SECURITY-PRIVACY.md](docs/SECURITY-PRIVACY.md).
 
@@ -26,33 +26,27 @@ Ein MCP-Connector, mit dem Claude Rechnungen, Gutschriften, Kunden und Auswertun
 Benötigt werden **Node.js 22 oder neuer** und ein **sevDesk-API-Token**.
 
 1. **API-Token holen:** In sevDesk in den Benutzereinstellungen (die Bezeichnung kann je nach Version abweichen). Der Token gehört zu einem Benutzer und wird wie ein Passwort behandelt. Ob sich ein Token auf Lesezugriff beschränken lässt, ist nicht belegt. Der Connector selbst liest nur.
-2. **Bauen** (solange das Paket nicht auf npm liegt):
-
-   ```bash
-   git clone https://github.com/muka-dev/claude-sevdesk-connector.git
-   cd claude-sevdesk-connector
-   npm install && npm run build
-   ```
-
-3. **Claude Desktop einrichten.** Ein Eintrag in `claude_desktop_config.json`, anschließend Claude Desktop neu starten:
+2. **Claude Desktop einrichten.** Ein Eintrag in `claude_desktop_config.json`, anschließend Claude Desktop neu starten:
 
    ```json
    {
      "mcpServers": {
        "sevdesk": {
-         "command": "node",
-         "args": ["/PFAD/ZU/claude-sevdesk-connector/dist/main.js"],
+         "command": "npx",
+         "args": ["-y", "claude-sevdesk-connector"],
          "env": { "SEVDESK_TOKEN": "API_TOKEN" }
        }
      }
    }
    ```
 
-4. **Oder mit Claude Code:**
+3. **Oder mit Claude Code:**
 
    ```bash
-   claude mcp add --env SEVDESK_TOKEN=API_TOKEN sevdesk -- node /PFAD/ZU/claude-sevdesk-connector/dist/main.js
+   claude mcp add --env SEVDESK_TOKEN=API_TOKEN sevdesk -- npx -y claude-sevdesk-connector
    ```
+
+4. **Aus dem Quellcode** (zum Mitentwickeln): siehe [Entwicklung und Tests](#entwicklung-und-tests).
 
 5. **Ausprobieren:** Zum Beispiel „Welche Rechnungen sind überfällig?“ oder „Wie hat sich der Umsatz im ersten Quartal entwickelt?“.
 
@@ -107,10 +101,12 @@ Details und bekannte Lücken: [docs/SECURITY-PRIVACY.md](docs/SECURITY-PRIVACY.m
 ## Entwicklung und Tests
 
 ```bash
+git clone https://github.com/muka-dev/claude-sevdesk-connector.git
+cd claude-sevdesk-connector
 npm install
 npm test          # Unit-, Replay- und Protokolltests mit Coverage-Schwellen, ohne API und ohne Netz
 npm run typecheck
-npm run build
+npm run build     # erzeugt dist/main.js, lokal startbar mit: SEVDESK_TOKEN=... node dist/main.js
 ```
 
 Die CI führt Typprüfung, Tests und Build bei jedem Pull Request aus ([.github/workflows/ci.yml](.github/workflows/ci.yml)). Die Teststrategie steht in [docs/TESTING.md](docs/TESTING.md).
