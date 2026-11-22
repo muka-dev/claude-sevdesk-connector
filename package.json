@@ -1,0 +1,30 @@
+{
+  "name": "claude-sevdesk-connector",
+  "version": "0.1.0",
+  "description": "Read-only MCP connector for sevDesk: contacts, invoices and evaluations for Claude.",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "claude-sevdesk-connector": "dist/main.js" },
+  "main": "dist/server.js",
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "keywords": ["mcp", "claude", "sevdesk", "accounting", "model-context-protocol"],
+  "author": "m-ko.de",
+  "homepage": "https://m-ko.de",
+  "repository": { "type": "git", "url": "git+https://github.com/muka-dev/claude-sevdesk-connector.git" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.12"
+  }
+}
