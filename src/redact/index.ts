@@ -15,7 +15,7 @@
 
 const PARTY_KEYS = new Set([
   "person", "company", "contactPersons", "street", "zip", "firstName", "lastName",
-  "contactName", "emailAddresses", "phoneNumbers", "surename", "familyname", "name2", "addressName", "addressStreet", "addressZip",
+  "contactName", "emailAddresses", "phoneNumbers", "surename", "familyname", "name2", "customerNumber", "addressName", "addressStreet", "addressZip",
 ]);
 /** Child objects that always describe a party, even if the parent does not. */
 const PARTY_CHILD_KEYS = new Set(["person", "company", "contactPersons", "address", "addresses", "billing", "shipping"]);
