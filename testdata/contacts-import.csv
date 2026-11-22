@@ -1,0 +1,246 @@
+﻿Kundennummer;Organisation;Vorname;Nachname;Kategorie;Strasse;PLZ;Ort;Land;E-Mail;Telefon;USt-IdNr;Steuernummer;Notiz
+TK-00001;Testfirma 001 Holzbau e.K.;;;Kunde;Musterweg 14;10115;Berlin;Deutschland;info001@example.com;+49 000 1841100;;59/834/12824;
+TK-00002;Testfirma 002 Fahrschule GmbH;;;Kunde;Musterweg 34;80331;München;Deutschland;info002@example.com;+49 000 5670707;DE982455345;89/651/53448;
+TK-00003;Testfirma 003 Holzbau AG;;;Kunde;Testgasse 8;53111;Bonn;Deutschland;info003@example.com;+49 000 4216486;DE925585569;17/566/17219;
+TK-00004;Testfirma 004 Reinigung AG;;;Kunde;Platzhalterweg 3;44135;Dortmund;Deutschland;info004@example.com;+49 000 1098517;;62/841/53300;
+TK-00005;Testfirma 005 Tierklinik UG (haftungsbeschränkt);;;Kunde;Musterweg 88;30159;Hannover;Deutschland;info005@example.com;+49 000 6720017;DE920325134;59/984/32933;
+TK-00006;Testfirma 006 Fahrschule GmbH;;;Kunde;Platzhalterweg 70;04109;Leipzig;Deutschland;info006@example.com;+49 000 2228293;DE961548170;30/803/76490;
+TK-00007;Testfirma 007 Bäckerei GbR;;;Kunde;Scheinstraße 95;44135;Dortmund;Deutschland;info007@example.com;+49 000 6572626;;35/582/23506;
+TK-00008;Testfirma 008 IT-Service KG;;;Kunde;Dummyring 118;44135;Dortmund;Deutschland;info008@example.com;+49 000 2804300;DE940359256;99/533/38301;
+TK-00009;Testfirma 009 Reinigung KG;;;Lieferant;Beispielstraße 107;50667;Köln;Deutschland;info009@example.com;+49 000 6249221;DE917343834;12/931/54308;
+TK-00010;Testfirma 010 Bäckerei GbR;;;Kunde;Scheinstraße 34;01067;Dresden;Deutschland;info010@example.com;+49 000 8143046;;14/517/59871;
+TK-00011;Testfirma 011 Glaserei GmbH;;;Kunde;Dummyring 87;53111;Bonn;Deutschland;info011@example.com;+49 000 1719032;DE920945967;83/232/17077;
+TK-00012;Testfirma 012 Malerbetrieb UG (haftungsbeschränkt);;;Kunde;Musterweg 56;60311;Frankfurt am Main;Deutschland;info012@example.com;+49 000 2123619;DE938454909;35/171/35407;
+TK-00013;Testfirma 013 Gartenpflege AG;;;Kunde;Beispielstraße 104;53111;Bonn;Deutschland;info013@example.com;+49 000 1669484;;14/763/79697;
+TK-00014;Testfirma 014 Elektro UG (haftungsbeschränkt);;;Kunde;Probeallee 44;01067;Dresden;Deutschland;info014@example.com;+49 000 6719268;DE949311643;81/863/74109;
+TK-00015;Testfirma 015 Druckerei AG;;;Kunde;Scheinstraße 100;10115;Berlin;Deutschland;info015@example.com;+49 000 8990937;DE985931946;23/599/99057;
+TK-00016;Testfirma 016 Werbeagentur AG;;;Kunde;Fiktivplatz 2;50667;Köln;Deutschland;info016@example.com;+49 000 9433429;;63/307/20033;
+TK-00017;Testfirma 017 Immobilien GmbH;;;Kunde;Fiktivplatz 112;28195;Bremen;Deutschland;info017@example.com;+49 000 9256049;DE907259211;86/847/48248;
+TK-00018;Testfirma 018 Logistik GmbH;;;Lieferant;Fiktivplatz 58;30159;Hannover;Deutschland;info018@example.com;+49 000 8778961;DE990559045;84/931/13222;
+TK-00019;Testfirma 019 Werbeagentur GmbH;;;Kunde;Scheinstraße 50;60311;Frankfurt am Main;Deutschland;info019@example.com;+49 000 8180522;;36/706/56372;
+TK-00020;Testfirma 020 IT-Service KG;;;Kunde;Probeallee 50;10115;Berlin;Deutschland;info020@example.com;+49 000 9151490;DE983001522;34/410/59272;
+TK-00021;Testfirma 021 Reinigung GmbH;;;Kunde;Testgasse 37;30159;Hannover;Deutschland;info021@example.com;+49 000 2683008;DE972143605;32/172/22068;
+TK-00022;Testfirma 022 Bäckerei e.K.;;;Kunde;Fiktivplatz 119;04109;Leipzig;Deutschland;info022@example.com;+49 000 9280940;;25/896/47451;
+TK-00023;Testfirma 023 Reinigung AG;;;Kunde;Scheinstraße 58;53111;Bonn;Deutschland;info023@example.com;+49 000 1747178;DE992298709;50/472/52607;
+TK-00024;Testfirma 024 Beratung GbR;;;Kunde;Scheinstraße 32;90402;Nürnberg;Deutschland;info024@example.com;+49 000 1000422;DE981822111;49/461/24618;
+TK-00025;Testfirma 025 Physiotherapie GmbH;;;Kunde;Scheinstraße 60;70173;Stuttgart;Deutschland;info025@example.com;+49 000 3129602;;98/383/64975;
+TK-00026;Testfirma 026 Software GmbH;;;Kunde;Platzhalterweg 118;20095;Hamburg;Deutschland;info026@example.com;+49 000 9431331;DE958639023;26/965/28732;
+TK-00027;Testfirma 027 Software GbR;;;Lieferant;Beispielstraße 63;40213;Düsseldorf;Deutschland;info027@example.com;+49 000 8523517;DE961952951;95/112/34040;
+TK-00028;Testfirma 028 Werbeagentur KG;;;Kunde;Musterweg 84;01067;Dresden;Deutschland;info028@example.com;+49 000 4407693;;70/527/13177;
+TK-00029;Testfirma 029 Tierklinik GmbH;;;Kunde;Scheinstraße 2;44135;Dortmund;Deutschland;info029@example.com;+49 000 8178736;DE960290856;83/461/49684;
+TK-00030;Testfirma 030 Physiotherapie AG;;;Kunde;Platzhalterweg 77;30159;Hannover;Deutschland;info030@example.com;+49 000 8020350;DE911703313;63/318/70868;
+TK-00031;Testfirma 031 Catering GmbH;;;Kunde;Fiktivplatz 35;04109;Leipzig;Deutschland;info031@example.com;+49 000 6724462;;13/300/25225;
+TK-00032;Testfirma 032 Metallbau GbR;;;Kunde;Dummyring 60;80331;München;Deutschland;info032@example.com;+49 000 5351401;DE978877510;31/908/79284;
+TK-00033;Testfirma 033 Software AG;;;Kunde;Probeallee 89;44135;Dortmund;Deutschland;info033@example.com;+49 000 4047129;DE902591555;89/806/37531;
+TK-00034;Testfirma 034 Fahrschule UG (haftungsbeschränkt);;;Kunde;Musterweg 115;20095;Hamburg;Deutschland;info034@example.com;+49 000 8202012;;91/719/93135;
+TK-00035;Testfirma 035 Fotostudio GmbH;;;Kunde;Testgasse 109;53111;Bonn;Deutschland;info035@example.com;+49 000 7283740;DE982976789;81/252/73796;
+TK-00036;Testfirma 036 Malerbetrieb GmbH;;;Lieferant;Probeallee 68;10115;Berlin;Deutschland;info036@example.com;+49 000 9113083;DE918429389;38/708/14990;
+TK-00037;Testfirma 037 Metallbau KG;;;Kunde;Probeallee 102;40213;Düsseldorf;Deutschland;info037@example.com;+49 000 8829593;;95/993/98143;
+TK-00038;Testfirma 038 Glaserei AG;;;Kunde;Scheinstraße 60;90402;Nürnberg;Deutschland;info038@example.com;+49 000 4778907;DE903867347;91/482/16561;
+TK-00039;Testfirma 039 Metallbau AG;;;Kunde;Musterweg 40;90402;Nürnberg;Deutschland;info039@example.com;+49 000 7512657;DE950734796;41/194/63276;
+TK-00040;Testfirma 040 Werbeagentur GmbH;;;Kunde;Platzhalterweg 88;30159;Hannover;Deutschland;info040@example.com;+49 000 8541519;;72/754/23998;
+TK-00041;Testfirma 041 Druckerei UG (haftungsbeschränkt);;;Kunde;Musterweg 73;53111;Bonn;Deutschland;info041@example.com;+49 000 2831026;DE928941588;78/106/64208;
+TK-00042;Testfirma 042 Metallbau KG;;;Kunde;Testgasse 90;20095;Hamburg;Deutschland;info042@example.com;+49 000 9238772;DE968801961;94/843/87722;
+TK-00043;Testfirma 043 Elektro GmbH;;;Kunde;Probeallee 25;20095;Hamburg;Deutschland;info043@example.com;+49 000 5441895;;34/557/14940;
+TK-00044;Testfirma 044 Holzbau GmbH;;;Kunde;Musterweg 2;01067;Dresden;Deutschland;info044@example.com;+49 000 2987988;DE989849551;41/174/44248;
+TK-00045;Testfirma 045 IT-Service KG;;;Lieferant;Dummyring 71;28195;Bremen;Deutschland;info045@example.com;+49 000 1548366;DE963319440;22/394/73170;
+TK-00046;Testfirma 046 Elektro e.K.;;;Kunde;Platzhalterweg 87;10115;Berlin;Deutschland;info046@example.com;+49 000 5386267;;83/887/77156;
+TK-00047;Testfirma 047 Reinigung UG (haftungsbeschränkt);;;Kunde;Fiktivplatz 104;04109;Leipzig;Deutschland;info047@example.com;+49 000 3838361;DE933545885;22/971/99480;
+TK-00048;Testfirma 048 Physiotherapie AG;;;Kunde;Scheinstraße 22;40213;Düsseldorf;Deutschland;info048@example.com;+49 000 8623236;DE947672370;93/978/76391;
+TK-00049;Testfirma 049 Druckerei GmbH;;;Kunde;Testgasse 15;90402;Nürnberg;Deutschland;info049@example.com;+49 000 3475490;;87/788/16862;
+TK-00050;Testfirma 050 Metallbau GbR;;;Kunde;Musterweg 93;04109;Leipzig;Deutschland;info050@example.com;+49 000 7593567;DE968555984;92/129/46541;
+TK-00051;Testfirma 051 Reinigung KG;;;Kunde;Fiktivplatz 61;01067;Dresden;Deutschland;info051@example.com;+49 000 7551033;DE900254718;84/810/36398;
+TK-00052;Testfirma 052 Werbeagentur GmbH;;;Kunde;Testgasse 101;40213;Düsseldorf;Deutschland;info052@example.com;+49 000 6516129;;12/577/75174;
+TK-00053;Testfirma 053 Reinigung GbR;;;Kunde;Beispielstraße 85;60311;Frankfurt am Main;Deutschland;info053@example.com;+49 000 3666606;DE913721077;56/333/87748;
+TK-00054;Testfirma 054 Software KG;;;Lieferant;Fiktivplatz 92;20095;Hamburg;Deutschland;info054@example.com;+49 000 9197090;DE950306621;99/306/21809;
+TK-00055;Testfirma 055 Beratung GbR;;;Kunde;Testgasse 28;90402;Nürnberg;Deutschland;info055@example.com;+49 000 2418248;;79/776/27309;
+TK-00056;Testfirma 056 Immobilien AG;;;Kunde;Probeallee 60;50667;Köln;Deutschland;info056@example.com;+49 000 1648636;DE930753605;34/389/96413;
+TK-00057;Testfirma 057 Catering GbR;;;Kunde;Platzhalterweg 15;10115;Berlin;Deutschland;info057@example.com;+49 000 1778579;DE992251761;73/414/43596;
+TK-00058;Testfirma 058 Bäckerei AG;;;Kunde;Scheinstraße 59;40213;Düsseldorf;Deutschland;info058@example.com;+49 000 7511028;;97/256/95274;
+TK-00059;Testfirma 059 Physiotherapie e.K.;;;Kunde;Testgasse 112;20095;Hamburg;Deutschland;info059@example.com;+49 000 1004289;DE983975211;94/258/67721;
+TK-00060;Testfirma 060 Gartenpflege GmbH;;;Kunde;Dummyring 12;90402;Nürnberg;Deutschland;info060@example.com;+49 000 8363621;DE963242812;20/172/97172;
+TK-00061;Testfirma 061 Werbeagentur UG (haftungsbeschränkt);;;Kunde;Scheinstraße 114;90402;Nürnberg;Deutschland;info061@example.com;+49 000 1330657;;34/946/54003;
+TK-00062;Testfirma 062 Physiotherapie AG;;;Kunde;Fiktivplatz 88;28195;Bremen;Deutschland;info062@example.com;+49 000 4709053;DE947762903;95/333/12253;
+TK-00063;Testfirma 063 Fotostudio GbR;;;Lieferant;Fiktivplatz 68;28195;Bremen;Deutschland;info063@example.com;+49 000 9316502;DE935964624;77/426/60217;
+TK-00064;Testfirma 064 Malerbetrieb GmbH;;;Kunde;Musterweg 110;53111;Bonn;Deutschland;info064@example.com;+49 000 2113900;;99/691/26776;
+TK-00065;Testfirma 065 Software e.K.;;;Kunde;Platzhalterweg 120;50667;Köln;Deutschland;info065@example.com;+49 000 5143562;DE959819122;32/991/78521;
+TK-00066;Testfirma 066 Logistik GmbH;;;Kunde;Probeallee 46;30159;Hannover;Deutschland;info066@example.com;+49 000 5394274;DE936951179;30/975/61348;
+TK-00067;Testfirma 067 Druckerei KG;;;Kunde;Testgasse 92;53111;Bonn;Deutschland;info067@example.com;+49 000 3670687;;89/105/82160;
+TK-00068;Testfirma 068 Beratung KG;;;Kunde;Dummyring 84;80331;München;Deutschland;info068@example.com;+49 000 3959354;DE996555668;69/849/96548;
+TK-00069;Testfirma 069 Gartenpflege AG;;;Kunde;Dummyring 3;10115;Berlin;Deutschland;info069@example.com;+49 000 5451971;DE956048632;44/904/44733;
+TK-00070;Testfirma 070 Malerbetrieb AG;;;Kunde;Fiktivplatz 74;10115;Berlin;Deutschland;info070@example.com;+49 000 5774986;;92/872/39282;
+TK-00071;Testfirma 071 Logistik AG;;;Kunde;Probeallee 74;80331;München;Deutschland;info071@example.com;+49 000 5438526;DE960450284;74/999/52880;
+TK-00072;Testfirma 072 IT-Service KG;;;Lieferant;Scheinstraße 78;53111;Bonn;Deutschland;info072@example.com;+49 000 9138095;DE939699527;20/531/50131;
+TK-00073;Testfirma 073 Gartenpflege GmbH;;;Kunde;Dummyring 46;60311;Frankfurt am Main;Deutschland;info073@example.com;+49 000 9664535;;81/696/15722;
+TK-00074;Testfirma 074 Holzbau AG;;;Kunde;Dummyring 87;10115;Berlin;Deutschland;info074@example.com;+49 000 2337794;DE960794603;65/152/82033;
+TK-00075;Testfirma 075 Physiotherapie AG;;;Kunde;Fiktivplatz 72;60311;Frankfurt am Main;Deutschland;info075@example.com;+49 000 7279700;DE947711793;25/359/89635;
+TK-00076;Testfirma 076 Physiotherapie e.K.;;;Kunde;Probeallee 68;10115;Berlin;Deutschland;info076@example.com;+49 000 2213964;;28/503/61614;
+TK-00077;Testfirma 077 Immobilien UG (haftungsbeschränkt);;;Kunde;Beispielstraße 105;44135;Dortmund;Deutschland;info077@example.com;+49 000 4934353;DE927942641;59/836/40038;
+TK-00078;Testfirma 078 Holzbau KG;;;Kunde;Probeallee 27;20095;Hamburg;Deutschland;info078@example.com;+49 000 1338368;DE916107289;63/686/36390;
+TK-00079;Testfirma 079 Logistik GmbH;;;Kunde;Probeallee 21;53111;Bonn;Deutschland;info079@example.com;+49 000 7215806;;68/577/68740;
+TK-00080;Testfirma 080 Physiotherapie KG;;;Kunde;Scheinstraße 96;28195;Bremen;Deutschland;info080@example.com;+49 000 5656539;DE965223893;53/817/36616;
+TK-00081;Testfirma 081 Druckerei GmbH;;;Lieferant;Dummyring 71;44135;Dortmund;Deutschland;info081@example.com;+49 000 8586905;DE933994210;55/904/70697;
+TK-00082;Testfirma 082 Bäckerei e.K.;;;Kunde;Testgasse 98;60311;Frankfurt am Main;Deutschland;info082@example.com;+49 000 7826193;;40/430/68090;
+TK-00083;Testfirma 083 Fotostudio e.K.;;;Kunde;Platzhalterweg 53;10115;Berlin;Deutschland;info083@example.com;+49 000 6383203;DE922040730;82/578/10603;
+TK-00084;Testfirma 084 Bäckerei GbR;;;Kunde;Scheinstraße 79;10115;Berlin;Deutschland;info084@example.com;+49 000 4906242;DE968490694;29/615/89361;
+TK-00085;Testfirma 085 Holzbau GbR;;;Kunde;Testgasse 76;53111;Bonn;Deutschland;info085@example.com;+49 000 1845921;;23/849/89359;
+TK-00086;Testfirma 086 Werbeagentur KG;;;Kunde;Scheinstraße 64;50667;Köln;Deutschland;info086@example.com;+49 000 6341026;DE930365100;35/945/44697;
+TK-00087;Testfirma 087 Glaserei UG (haftungsbeschränkt);;;Kunde;Beispielstraße 108;30159;Hannover;Deutschland;info087@example.com;+49 000 4955405;DE970255431;76/461/15558;
+TK-00088;Testfirma 088 Elektro GmbH;;;Kunde;Beispielstraße 81;53111;Bonn;Deutschland;info088@example.com;+49 000 6377853;;48/819/98327;
+TK-00089;Testfirma 089 Physiotherapie AG;;;Kunde;Probeallee 15;10115;Berlin;Deutschland;info089@example.com;+49 000 3901072;DE962511673;76/404/63206;
+TK-00090;Testfirma 090 Bäckerei GbR;;;Lieferant;Dummyring 87;53111;Bonn;Deutschland;info090@example.com;+49 000 3706491;DE960637898;24/299/25532;
+TK-00091;Testfirma 091 Fotostudio GmbH;;;Kunde;Dummyring 75;28195;Bremen;Deutschland;info091@example.com;+49 000 7304554;;38/470/75310;
+TK-00092;Testfirma 092 Holzbau GbR;;;Kunde;Probeallee 75;28195;Bremen;Deutschland;info092@example.com;+49 000 7205928;DE984407504;52/207/85554;
+TK-00093;Testfirma 093 Metallbau GmbH;;;Kunde;Probeallee 63;28195;Bremen;Deutschland;info093@example.com;+49 000 2057193;DE964604485;97/878/31330;
+TK-00094;Testfirma 094 Beratung AG;;;Kunde;Beispielstraße 90;44135;Dortmund;Deutschland;info094@example.com;+49 000 1524444;;27/562/28791;
+TK-00095;Testfirma 095 Immobilien GbR;;;Kunde;Musterweg 86;80331;München;Deutschland;info095@example.com;+49 000 8878863;DE925214385;84/868/66932;
+TK-00096;Testfirma 096 Holzbau KG;;;Kunde;Testgasse 87;28195;Bremen;Deutschland;info096@example.com;+49 000 5587202;DE954309564;22/416/23833;
+TK-00097;Testfirma 097 Holzbau GbR;;;Kunde;Testgasse 100;44135;Dortmund;Deutschland;info097@example.com;+49 000 4277850;;94/241/66427;
+TK-00098;Testfirma 098 Fahrschule KG;;;Kunde;Testgasse 74;53111;Bonn;Deutschland;info098@example.com;+49 000 6170422;DE972968964;41/323/19020;
+TK-00099;Testfirma 099 Reinigung e.K.;;;Lieferant;Fiktivplatz 81;50667;Köln;Deutschland;info099@example.com;+49 000 3485508;DE932226834;63/851/93925;
+TK-00100;Testfirma 100 Catering GmbH;;;Kunde;Platzhalterweg 19;50667;Köln;Deutschland;info100@example.com;+49 000 5186534;;26/989/62414;
+TK-00101;Testfirma 101 Bäckerei UG (haftungsbeschränkt);;;Kunde;Probeallee 79;40213;Düsseldorf;Deutschland;info101@example.com;+49 000 5249029;DE990011570;63/543/70005;
+TK-00102;Testfirma 102 Reinigung KG;;;Kunde;Beispielstraße 73;30159;Hannover;Deutschland;info102@example.com;+49 000 4435047;DE977698454;66/754/19848;
+TK-00103;Testfirma 103 Fotostudio e.K.;;;Kunde;Fiktivplatz 47;50667;Köln;Deutschland;info103@example.com;+49 000 5009006;;47/307/47668;
+TK-00104;Testfirma 104 Glaserei AG;;;Kunde;Scheinstraße 80;10115;Berlin;Deutschland;info104@example.com;+49 000 1227196;DE983164483;25/663/42587;
+TK-00105;Testfirma 105 Holzbau AG;;;Kunde;Musterweg 35;70173;Stuttgart;Deutschland;info105@example.com;+49 000 3854046;DE950608975;87/485/29703;
+TK-00106;Testfirma 106 Gartenpflege KG;;;Kunde;Dummyring 52;20095;Hamburg;Deutschland;info106@example.com;+49 000 9577949;;63/839/90564;
+TK-00107;Testfirma 107 Beratung GmbH;;;Kunde;Probeallee 82;04109;Leipzig;Deutschland;info107@example.com;+49 000 2173252;DE977060552;88/528/82675;
+TK-00108;Testfirma 108 Gartenpflege AG;;;Lieferant;Fiktivplatz 1;80331;München;Deutschland;info108@example.com;+49 000 5689241;DE957542638;89/791/66469;
+TK-00109;Testfirma 109 Software KG;;;Kunde;Probeallee 74;80331;München;Deutschland;info109@example.com;+49 000 9719533;;46/404/28871;
+TK-00110;Testfirma 110 Werbeagentur AG;;;Kunde;Testgasse 12;90402;Nürnberg;Deutschland;info110@example.com;+49 000 7960361;DE976303354;36/178/21791;
+TK-00111;Testfirma 111 Druckerei e.K.;;;Kunde;Probeallee 14;44135;Dortmund;Deutschland;info111@example.com;+49 000 6503857;DE929393450;16/536/97722;
+TK-00112;Testfirma 112 Werbeagentur GbR;;;Kunde;Dummyring 25;20095;Hamburg;Deutschland;info112@example.com;+49 000 2720599;;53/163/22946;
+TK-00113;Testfirma 113 Tierklinik AG;;;Kunde;Platzhalterweg 65;60311;Frankfurt am Main;Deutschland;info113@example.com;+49 000 8503604;DE945873749;81/399/20842;
+TK-00114;Testfirma 114 Bäckerei GmbH;;;Kunde;Testgasse 31;04109;Leipzig;Deutschland;info114@example.com;+49 000 5838168;DE928419361;79/466/14691;
+TK-00115;Testfirma 115 Beratung AG;;;Kunde;Musterweg 91;20095;Hamburg;Deutschland;info115@example.com;+49 000 7801010;;36/962/32987;
+TK-00116;Testfirma 116 Glaserei GmbH;;;Kunde;Scheinstraße 45;70173;Stuttgart;Deutschland;info116@example.com;+49 000 4835413;DE943842443;86/685/84612;
+TK-00117;Testfirma 117 Reinigung AG;;;Lieferant;Dummyring 39;70173;Stuttgart;Deutschland;info117@example.com;+49 000 3434872;DE935413231;38/744/30926;
+TK-00118;Testfirma 118 Software GmbH;;;Kunde;Platzhalterweg 91;40213;Düsseldorf;Deutschland;info118@example.com;+49 000 2504425;;73/680/18499;
+TK-00119;Testfirma 119 Logistik AG;;;Kunde;Scheinstraße 97;40213;Düsseldorf;Deutschland;info119@example.com;+49 000 1018508;DE955552167;31/998/78622;
+TK-00120;Testfirma 120 Logistik GbR;;;Kunde;Musterweg 118;70173;Stuttgart;Deutschland;info120@example.com;+49 000 6270597;DE933191230;39/691/40327;
+TK-00121;Testfirma 121 Gartenpflege AG;;;Kunde;Scheinstraße 87;30159;Hannover;Deutschland;info121@example.com;+49 000 8581698;;77/178/86489;
+TK-00122;Testfirma 122 Gartenpflege GbR;;;Kunde;Beispielstraße 76;28195;Bremen;Deutschland;info122@example.com;+49 000 5664496;DE900046132;46/316/45093;
+TK-00123;Testfirma 123 Malerbetrieb AG;;;Kunde;Platzhalterweg 104;80331;München;Deutschland;info123@example.com;+49 000 6984222;DE993760240;20/546/43244;
+TK-00124;Testfirma 124 Immobilien GbR;;;Kunde;Platzhalterweg 46;90402;Nürnberg;Deutschland;info124@example.com;+49 000 7496415;;92/227/34168;
+TK-00125;Testfirma 125 Werbeagentur e.K.;;;Kunde;Beispielstraße 93;01067;Dresden;Deutschland;info125@example.com;+49 000 3640608;DE998449261;98/529/83077;
+TK-00126;Testfirma 126 Bäckerei e.K.;;;Lieferant;Platzhalterweg 4;50667;Köln;Deutschland;info126@example.com;+49 000 8790404;DE998402420;62/994/95680;
+TK-00127;Testfirma 127 Tierklinik e.K.;;;Kunde;Probeallee 80;04109;Leipzig;Deutschland;info127@example.com;+49 000 4673328;;99/498/82821;
+TK-00128;Testfirma 128 Malerbetrieb UG (haftungsbeschränkt);;;Kunde;Testgasse 37;01067;Dresden;Deutschland;info128@example.com;+49 000 2130268;DE917206451;83/657/85920;
+TK-00129;Testfirma 129 Elektro GbR;;;Kunde;Beispielstraße 71;80331;München;Deutschland;info129@example.com;+49 000 7526312;DE979309473;50/552/30468;
+TK-00130;Testfirma 130 Fotostudio e.K.;;;Kunde;Scheinstraße 35;28195;Bremen;Deutschland;info130@example.com;+49 000 1810715;;94/530/21214;
+TK-00131;Testfirma 131 Catering UG (haftungsbeschränkt);;;Kunde;Platzhalterweg 66;90402;Nürnberg;Deutschland;info131@example.com;+49 000 2465746;DE950410176;22/339/72828;
+TK-00132;Testfirma 132 IT-Service KG;;;Kunde;Musterweg 36;60311;Frankfurt am Main;Deutschland;info132@example.com;+49 000 6116984;DE998277381;26/506/68621;
+TK-00133;Testfirma 133 Catering GmbH;;;Kunde;Scheinstraße 31;40213;Düsseldorf;Deutschland;info133@example.com;+49 000 8122456;;31/494/12268;
+TK-00134;Testfirma 134 Reinigung AG;;;Kunde;Fiktivplatz 24;60311;Frankfurt am Main;Deutschland;info134@example.com;+49 000 6327570;DE949943178;61/713/53194;
+TK-00135;Testfirma 135 Fahrschule KG;;;Lieferant;Probeallee 90;30159;Hannover;Deutschland;info135@example.com;+49 000 1994404;DE940582917;90/684/84017;
+TK-00136;Testfirma 136 Logistik e.K.;;;Kunde;Dummyring 55;60311;Frankfurt am Main;Deutschland;info136@example.com;+49 000 4318984;;10/137/66766;
+TK-00137;Testfirma 137 Software KG;;;Kunde;Fiktivplatz 94;44135;Dortmund;Deutschland;info137@example.com;+49 000 8305664;DE948737466;69/408/25818;
+TK-00138;Testfirma 138 Holzbau KG;;;Kunde;Beispielstraße 106;70173;Stuttgart;Deutschland;info138@example.com;+49 000 9160933;DE979159088;79/449/94653;
+TK-00139;Testfirma 139 Physiotherapie AG;;;Kunde;Dummyring 105;53111;Bonn;Deutschland;info139@example.com;+49 000 5462666;;78/102/41890;
+TK-00140;Testfirma 140 Holzbau GbR;;;Kunde;Dummyring 64;28195;Bremen;Deutschland;info140@example.com;+49 000 1506241;DE921423544;71/104/18625;
+TK-00141;Testfirma 141 Beratung KG;;;Kunde;Dummyring 87;28195;Bremen;Deutschland;info141@example.com;+49 000 6796468;DE953647234;47/922/15317;
+TK-00142;Testfirma 142 Elektro KG;;;Kunde;Beispielstraße 67;10115;Berlin;Deutschland;info142@example.com;+49 000 3313227;;98/263/27671;
+TK-00143;Testfirma 143 Immobilien KG;;;Kunde;Fiktivplatz 40;20095;Hamburg;Deutschland;info143@example.com;+49 000 8221194;DE944227148;52/502/12202;
+TK-00144;Testfirma 144 Catering AG;;;Lieferant;Dummyring 62;50667;Köln;Deutschland;info144@example.com;+49 000 6776288;DE900544823;73/418/48004;
+TK-00145;Testfirma 145 Physiotherapie AG;;;Kunde;Dummyring 13;50667;Köln;Deutschland;info145@example.com;+49 000 6410433;;72/177/25768;
+TK-00146;Testfirma 146 Immobilien AG;;;Kunde;Probeallee 79;90402;Nürnberg;Deutschland;info146@example.com;+49 000 7879518;DE994278298;50/582/87000;
+TK-00147;Testfirma 147 Software UG (haftungsbeschränkt);;;Kunde;Testgasse 50;80331;München;Deutschland;info147@example.com;+49 000 1858507;DE964755732;66/466/53827;
+TK-00148;Testfirma 148 Catering KG;;;Kunde;Probeallee 78;04109;Leipzig;Deutschland;info148@example.com;+49 000 3460190;;25/863/91039;
+TK-00149;Testfirma 149 Physiotherapie e.K.;;;Kunde;Testgasse 61;53111;Bonn;Deutschland;info149@example.com;+49 000 4063532;DE908728922;97/211/30091;
+TK-00150;Testfirma 150 Reinigung GmbH;;;Kunde;Fiktivplatz 55;04109;Leipzig;Deutschland;info150@example.com;+49 000 9810622;DE900186737;79/460/87642;
+TK-00151;;Ayşe;Demo;Kunde;Fiktivplatz 59;80331;München;Deutschland;ayse.001@example.com;+49 000 4223998;;;Privatkunde, Testdatensatz
+TK-00152;;Walter;Zwick;Kunde;Dummyring 80;30159;Hannover;Deutschland;walter.002@example.com;+49 000 9643153;;;Privatkunde, Testdatensatz
+TK-00153;;Vera;Ruppert;Kunde;Platzhalterweg 22;28195;Bremen;Deutschland;vera.003@example.com;+49 000 5782448;;;Privatkunde, Testdatensatz
+TK-00154;;Björn;Ilgaz;Kunde;Testgasse 87;10115;Berlin;Deutschland;bjoern.004@example.com;+49 000 9193482;;;Privatkunde, Testdatensatz
+TK-00155;;Quirin;Pfeiffer;Kunde;Beispielstraße 81;80331;München;Deutschland;quirin.005@example.com;+49 000 9784338;;;Privatkunde, Testdatensatz
+TK-00156;;Ilse;Fuchs;Kunde;Musterweg 55;28195;Bremen;Deutschland;ilse.006@example.com;+49 000 1189982;;;Privatkunde, Testdatensatz
+TK-00157;;Karla;Ilgaz;Kunde;Musterweg 46;44135;Dortmund;Deutschland;karla.007@example.com;+49 000 4562980;;;Privatkunde, Testdatensatz
+TK-00158;;Rita;Krämer;Kunde;Musterweg 62;80331;München;Deutschland;rita.008@example.com;+49 000 7122141;;;Privatkunde, Testdatensatz
+TK-00159;;Nico;Fuchs;Kunde;Dummyring 43;10115;Berlin;Deutschland;nico.009@example.com;+49 000 2900355;;;Privatkunde, Testdatensatz
+TK-00160;;Quirin;Ilgaz;Kunde;Probeallee 59;28195;Bremen;Deutschland;quirin.010@example.com;+49 000 1703885;;;Privatkunde, Testdatensatz
+TK-00161;;Uwe;Demo;Kunde;Scheinstraße 107;20095;Hamburg;Deutschland;uwe.011@example.com;+49 000 3425559;;;Privatkunde, Testdatensatz
+TK-00162;;Ole;Hügel;Kunde;Testgasse 80;04109;Leipzig;Deutschland;ole.012@example.com;+49 000 1300259;;;Privatkunde, Testdatensatz
+TK-00163;;Lukas;Fuchs;Kunde;Fiktivplatz 6;20095;Hamburg;Deutschland;lukas.013@example.com;+49 000 3224142;;;Privatkunde, Testdatensatz
+TK-00164;;Greta;Ludwig;Kunde;Dummyring 59;10115;Berlin;Deutschland;greta.014@example.com;+49 000 6948334;;;Privatkunde, Testdatensatz
+TK-00165;;Rita;Zwick;Kunde;Probeallee 116;28195;Bremen;Deutschland;rita.015@example.com;+49 000 2116162;;;Privatkunde, Testdatensatz
+TK-00166;;Tilda;Testmann;Kunde;Scheinstraße 13;10115;Berlin;Deutschland;tilda.016@example.com;+49 000 9189672;;;Privatkunde, Testdatensatz
+TK-00167;;David;Lindqvist;Kunde;Platzhalterweg 27;44135;Dortmund;Deutschland;david.017@example.com;+49 000 5125475;;;Privatkunde, Testdatensatz
+TK-00168;;Quirin;Fuchs;Kunde;Fiktivplatz 27;44135;Dortmund;Deutschland;quirin.018@example.com;+49 000 2044306;;;Privatkunde, Testdatensatz
+TK-00169;;Felix;Ilgaz;Kunde;Testgasse 100;50667;Köln;Deutschland;felix.019@example.com;+49 000 4756048;;;Privatkunde, Testdatensatz
+TK-00170;;David;Ebner;Kunde;Scheinstraße 67;30159;Hannover;Deutschland;david.020@example.com;+49 000 4769709;;;Privatkunde, Testdatensatz
+TK-00171;;Jürgen;Krämer;Kunde;Scheinstraße 106;60311;Frankfurt am Main;Deutschland;juergen.021@example.com;+49 000 4628704;;;Privatkunde, Testdatensatz
+TK-00172;;Petra;Musterer;Kunde;Fiktivplatz 116;10115;Berlin;Deutschland;petra.022@example.com;+49 000 4087381;;;Privatkunde, Testdatensatz
+TK-00173;;Jonas;Haas;Kunde;Probeallee 83;20095;Hamburg;Deutschland;jonas.023@example.com;+49 000 7074568;;;Privatkunde, Testdatensatz
+TK-00174;;Ben;Lindqvist;Kunde;Musterweg 67;04109;Leipzig;Deutschland;ben.024@example.com;+49 000 6386521;;;Privatkunde, Testdatensatz
+TK-00175;;Karla;Ebner;Kunde;Scheinstraße 65;80331;München;Deutschland;karla.025@example.com;+49 000 1180877;;;Privatkunde, Testdatensatz
+TK-00176;;Clara;Dreher;Kunde;Musterweg 103;30159;Hannover;Deutschland;clara.026@example.com;+49 000 2452674;;;Privatkunde, Testdatensatz
+TK-00177;;Zoe;Ruppert;Kunde;Scheinstraße 89;53111;Bonn;Deutschland;zoe.027@example.com;+49 000 9714928;;;Privatkunde, Testdatensatz
+TK-00178;;Jonas;Wendt;Kunde;Fiktivplatz 51;40213;Düsseldorf;Deutschland;jonas.028@example.com;+49 000 5522808;;;Privatkunde, Testdatensatz
+TK-00179;;Ayşe;Kalt;Kunde;Dummyring 73;60311;Frankfurt am Main;Deutschland;ayse.029@example.com;+49 000 6055897;;;Privatkunde, Testdatensatz
+TK-00180;;Petra;Pfeiffer;Kunde;Fiktivplatz 11;01067;Dresden;Deutschland;petra.030@example.com;+49 000 4320427;;;Privatkunde, Testdatensatz
+TK-00181;;Sören;Dreher;Kunde;Beispielstraße 44;01067;Dresden;Deutschland;soeren.031@example.com;+49 000 8851801;;;Privatkunde, Testdatensatz
+TK-00182;;Jonas;Ostermann;Kunde;Platzhalterweg 105;90402;Nürnberg;Deutschland;jonas.032@example.com;+49 000 1955817;;;Privatkunde, Testdatensatz
+TK-00183;;Ben;Kalt;Kunde;Fiktivplatz 5;40213;Düsseldorf;Deutschland;ben.033@example.com;+49 000 8165165;;;Privatkunde, Testdatensatz
+TK-00184;;Ayşe;Ilgaz;Kunde;Dummyring 59;01067;Dresden;Deutschland;ayse.034@example.com;+49 000 6296039;;;Privatkunde, Testdatensatz
+TK-00185;;Tilda;Pfeiffer;Kunde;Fiktivplatz 120;80331;München;Deutschland;tilda.035@example.com;+49 000 5146290;;;Privatkunde, Testdatensatz
+TK-00186;;Sven;Ebner;Kunde;Probeallee 55;90402;Nürnberg;Deutschland;sven.036@example.com;+49 000 7695158;;;Privatkunde, Testdatensatz
+TK-00187;;Rita;Stahl;Kunde;Platzhalterweg 76;50667;Köln;Deutschland;rita.037@example.com;+49 000 9199862;;;Privatkunde, Testdatensatz
+TK-00188;;Walter;Wendt;Kunde;Beispielstraße 35;28195;Bremen;Deutschland;walter.038@example.com;+49 000 6207752;;;Privatkunde, Testdatensatz
+TK-00189;;Petra;Zwick;Kunde;Fiktivplatz 113;01067;Dresden;Deutschland;petra.039@example.com;+49 000 1790001;;;Privatkunde, Testdatensatz
+TK-00190;;Rita;Ilgaz;Kunde;Scheinstraße 64;01067;Dresden;Deutschland;rita.040@example.com;+49 000 2764040;;;Privatkunde, Testdatensatz
+TK-00191;;Emma;Krämer;Kunde;Musterweg 85;50667;Köln;Deutschland;emma.041@example.com;+49 000 2069717;;;Privatkunde, Testdatensatz
+TK-00192;;Uwe;Ebner;Kunde;Scheinstraße 65;28195;Bremen;Deutschland;uwe.042@example.com;+49 000 8742908;;;Privatkunde, Testdatensatz
+TK-00193;;Greta;Dreher;Kunde;Beispielstraße 26;53111;Bonn;Deutschland;greta.043@example.com;+49 000 7694806;;;Privatkunde, Testdatensatz
+TK-00194;;Anna;Ludwig;Kunde;Dummyring 1;01067;Dresden;Deutschland;anna.044@example.com;+49 000 4376500;;;Privatkunde, Testdatensatz
+TK-00195;;Rita;Pfeiffer;Kunde;Scheinstraße 102;44135;Dortmund;Deutschland;rita.045@example.com;+49 000 7846481;;;Privatkunde, Testdatensatz
+TK-00196;;Karla;Demo;Kunde;Testgasse 91;28195;Bremen;Deutschland;karla.046@example.com;+49 000 1458606;;;Privatkunde, Testdatensatz
+TK-00197;;Jonas;Hügel;Kunde;Musterweg 36;44135;Dortmund;Deutschland;jonas.047@example.com;+49 000 9149232;;;Privatkunde, Testdatensatz
+TK-00198;;Jürgen;Musterer;Kunde;Testgasse 76;53111;Bonn;Deutschland;juergen.048@example.com;+49 000 9696947;;;Privatkunde, Testdatensatz
+TK-00199;;Uwe;Ostermann;Kunde;Probeallee 95;30159;Hannover;Deutschland;uwe.049@example.com;+49 000 8672215;;;Privatkunde, Testdatensatz
+TK-00200;;Walter;Mertens;Kunde;Dummyring 56;70173;Stuttgart;Deutschland;walter.050@example.com;+49 000 8320376;;;Privatkunde, Testdatensatz
+TK-00201;;Anna;Beispiel;Kunde;Scheinstraße 65;01067;Dresden;Deutschland;anna.051@example.com;+49 000 6069405;;;Privatkunde, Testdatensatz
+TK-00202;;Björn;Musterer;Kunde;Dummyring 81;44135;Dortmund;Deutschland;bjoern.052@example.com;+49 000 1395671;;;Privatkunde, Testdatensatz
+TK-00203;;Zoe;Kalt;Kunde;Testgasse 8;10115;Berlin;Deutschland;zoe.053@example.com;+49 000 4842766;;;Privatkunde, Testdatensatz
+TK-00204;;Quirin;Pfeiffer;Kunde;Testgasse 73;80331;München;Deutschland;quirin.054@example.com;+49 000 5251624;;;Privatkunde, Testdatensatz
+TK-00205;;Walter;Ludwig;Kunde;Musterweg 75;50667;Köln;Deutschland;walter.055@example.com;+49 000 4110335;;;Privatkunde, Testdatensatz
+TK-00206;;Karla;Ruppert;Kunde;Beispielstraße 103;20095;Hamburg;Deutschland;karla.056@example.com;+49 000 2475242;;;Privatkunde, Testdatensatz
+TK-00207;;Björn;Kalt;Kunde;Probeallee 8;28195;Bremen;Deutschland;bjoern.057@example.com;+49 000 4006394;;;Privatkunde, Testdatensatz
+TK-00208;;David;Ludwig;Kunde;Fiktivplatz 114;20095;Hamburg;Deutschland;david.058@example.com;+49 000 9746949;;;Privatkunde, Testdatensatz
+TK-00209;;Ole;Ebner;Kunde;Beispielstraße 37;20095;Hamburg;Deutschland;ole.059@example.com;+49 000 5146920;;;Privatkunde, Testdatensatz
+TK-00210;;Karla;Fuchs;Kunde;Beispielstraße 45;90402;Nürnberg;Deutschland;karla.060@example.com;+49 000 9176932;;;Privatkunde, Testdatensatz
+TK-00211;;Sören;Ebner;Kunde;Fiktivplatz 31;44135;Dortmund;Deutschland;soeren.061@example.com;+49 000 7297461;;;Privatkunde, Testdatensatz
+TK-00212;;Zoe;Dreher;Kunde;Dummyring 13;44135;Dortmund;Deutschland;zoe.062@example.com;+49 000 9904303;;;Privatkunde, Testdatensatz
+TK-00213;;Ayşe;Schäfer-Test;Kunde;Beispielstraße 108;20095;Hamburg;Deutschland;ayse.063@example.com;+49 000 5879248;;;Privatkunde, Testdatensatz
+TK-00214;;Vera;Hügel;Kunde;Testgasse 26;60311;Frankfurt am Main;Deutschland;vera.064@example.com;+49 000 5790216;;;Privatkunde, Testdatensatz
+TK-00215;;Hannes;Zwick;Kunde;Fiktivplatz 96;40213;Düsseldorf;Deutschland;hannes.065@example.com;+49 000 7997921;;;Privatkunde, Testdatensatz
+TK-00216;;Petra;Dreher;Kunde;Dummyring 52;01067;Dresden;Deutschland;petra.066@example.com;+49 000 6034849;;;Privatkunde, Testdatensatz
+TK-00217;;Jonas;Musterer;Kunde;Beispielstraße 106;90402;Nürnberg;Deutschland;jonas.067@example.com;+49 000 1828147;;;Privatkunde, Testdatensatz
+TK-00218;;Uwe;Testmann;Kunde;Musterweg 116;50667;Köln;Deutschland;uwe.068@example.com;+49 000 8138408;;;Privatkunde, Testdatensatz
+TK-00219;;Ayşe;Zwick;Kunde;Probeallee 66;10115;Berlin;Deutschland;ayse.069@example.com;+49 000 5746809;;;Privatkunde, Testdatensatz
+TK-00220;;Walter;Demo;Kunde;Musterweg 66;53111;Bonn;Deutschland;walter.070@example.com;+49 000 1042105;;;Privatkunde, Testdatensatz
+TK-00221;;Yara;Zwick;Kunde;Scheinstraße 22;40213;Düsseldorf;Deutschland;yara.071@example.com;+49 000 2700193;;;Privatkunde, Testdatensatz
+TK-00222;;Tilda;Fuchs;Kunde;Scheinstraße 97;90402;Nürnberg;Deutschland;tilda.072@example.com;+49 000 1148329;;;Privatkunde, Testdatensatz
+TK-00223;;Quirin;Testmann;Kunde;Testgasse 37;04109;Leipzig;Deutschland;quirin.073@example.com;+49 000 9180282;;;Privatkunde, Testdatensatz
+TK-00224;;Lukas;Fuchs;Kunde;Dummyring 105;70173;Stuttgart;Deutschland;lukas.074@example.com;+49 000 6658764;;;Privatkunde, Testdatensatz
+TK-00225;;Anna;Pfeiffer;Kunde;Testgasse 94;50667;Köln;Deutschland;anna.075@example.com;+49 000 1600040;;;Privatkunde, Testdatensatz
+TK-00226;;Anna;Pfeiffer;Kunde;Platzhalterweg 80;40213;Düsseldorf;Deutschland;anna.076@example.com;+49 000 1517104;;;Privatkunde, Testdatensatz
+TK-00227;;Zoe;Wendt;Kunde;Testgasse 110;28195;Bremen;Deutschland;zoe.077@example.com;+49 000 3172178;;;Privatkunde, Testdatensatz
+TK-00228;;Uwe;Ostermann;Kunde;Fiktivplatz 6;40213;Düsseldorf;Deutschland;uwe.078@example.com;+49 000 2951545;;;Privatkunde, Testdatensatz
+TK-00229;;Sven;Ruppert;Kunde;Beispielstraße 56;40213;Düsseldorf;Deutschland;sven.079@example.com;+49 000 3504280;;;Privatkunde, Testdatensatz
+TK-00230;;Anna;Testmann;Kunde;Platzhalterweg 88;70173;Stuttgart;Deutschland;anna.080@example.com;+49 000 9543995;;;Privatkunde, Testdatensatz
+TK-00231;;Ayşe;Mertens;Kunde;Probeallee 71;04109;Leipzig;Deutschland;ayse.081@example.com;+49 000 3041666;;;Privatkunde, Testdatensatz
+TK-00232;;Sören;Brandl;Kunde;Beispielstraße 23;60311;Frankfurt am Main;Deutschland;soeren.082@example.com;+49 000 8028107;;;Privatkunde, Testdatensatz
+TK-00233;;Jonas;Hügel;Kunde;Probeallee 52;01067;Dresden;Deutschland;jonas.083@example.com;+49 000 9951888;;;Privatkunde, Testdatensatz
+TK-00234;;Sven;Beispiel;Kunde;Platzhalterweg 10;01067;Dresden;Deutschland;sven.084@example.com;+49 000 6368874;;;Privatkunde, Testdatensatz
+TK-00235;;Ilse;Ruppert;Kunde;Scheinstraße 46;90402;Nürnberg;Deutschland;ilse.085@example.com;+49 000 9448566;;;Privatkunde, Testdatensatz
+TK-00236;;Clara;Testmann;Kunde;Platzhalterweg 87;60311;Frankfurt am Main;Deutschland;clara.086@example.com;+49 000 2090668;;;Privatkunde, Testdatensatz
+TK-00237;;Ilse;Demo;Kunde;Probeallee 115;10115;Berlin;Deutschland;ilse.087@example.com;+49 000 4384936;;;Privatkunde, Testdatensatz
+TK-00238;;Petra;Kalt;Kunde;Testgasse 77;40213;Düsseldorf;Deutschland;petra.088@example.com;+49 000 3393879;;;Privatkunde, Testdatensatz
+TK-00239;;Hannes;Pfeiffer;Kunde;Platzhalterweg 99;50667;Köln;Deutschland;hannes.089@example.com;+49 000 9606165;;;Privatkunde, Testdatensatz
+TK-00240;;Yara;Wendt;Kunde;Scheinstraße 60;04109;Leipzig;Deutschland;yara.090@example.com;+49 000 9922652;;;Privatkunde, Testdatensatz
+TK-00241;"Testfirma Müller & Söhne ""Die Erste"" GmbH";;;Kunde;Musterweg 1;23552;Lübeck;Deutschland;edge241@example.com;+49 000 1652552;;;"Feld mit Semikolon; und Komma, Test"
+TK-00242;Testfirma Straßenbau Größe GmbH;;;Kunde;Musterweg 1;37073;Göttingen;Deutschland;;+49 000 6166855;;;
+TK-00243;;Ökonomie;Müßig-Probe;Kunde;Musterweg 1;79098;Freiburg;Deutschland;edge243@example.com;+49 000 9663573;;;
+TK-00244;Testfirma Lange-Bezeichnung-Lange-Bezeichnung-Lange-Bezeichnung-Lange-Bezeichnung-Lange-Bezeichnung-Lange-Bezeichnung-GmbH;;;Kunde;Musterweg 1;14467;Potsdam;Deutschland;edge244@example.com;+49 000 6757734;;;
+TK-00245;Testfirma Lieferant Beispiel e.K.;;;Lieferant;Musterweg 1;24103;Kiel;Deutschland;edge245@example.com;;;;
