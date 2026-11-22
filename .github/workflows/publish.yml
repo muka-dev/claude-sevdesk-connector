@@ -1,0 +1,33 @@
+name: Publish to npm
+
+# Runs when a GitHub release is published. Needs the repository secret NPM_TOKEN
+# (npm granular access token with publish rights for this package).
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  id-token: write # npm provenance
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - name: Release tag must match package.json version
+        run: |
+          v="v$(node -p "require('./package.json').version")"
+          [ "$GITHUB_REF_NAME" = "$v" ] || { echo "::error::Tag $GITHUB_REF_NAME does not match package version $v"; exit 1; }
+      - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

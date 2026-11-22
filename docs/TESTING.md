@@ -1,6 +1,6 @@
 # Teststrategie: claude-sevdesk-connector (v0.1)
 
-Stand: Entwurf. Grundlage ist [DESIGN.md](DESIGN.md). Der Umfang entspricht dem Lexware-Connector ohne Storno, Storno kommt in v0.3.
+Stand: umgesetzt für v0.1 (107 Tests, Coverage-Schwellen aktiv). Grundlage ist [DESIGN.md](DESIGN.md). Der Umfang entspricht dem Lexware-Connector ohne Storno, Storno kommt in v0.3.
 
 ## 1. Ziele
 
@@ -88,7 +88,7 @@ Die Lexware-Tests für Aging, Umsatz, Konzentration und USt werden übernommen. 
 
 | Fall | Prüfung | Typ |
 |---|---|---|
-| Tool-Liste | Genau die zehn v0.1-Tools, Namen mit Präfix `sevdesk_` | Protokoll |
+| Tool-Liste | Genau die sieben v0.1-Tools, Namen mit Präfix `sevdesk_` | Protokoll |
 | Schema | Jedes Tool hat ein Eingabeschema, Datumsfelder sind `yyyy-MM-dd` | Protokoll |
 | Nur lesend | Alle Tools tragen `readOnlyHint: true`, keine Schreibpfade | Protokoll |
 | Redaktion im Tool | Ausgabe enthält keinen Klarnamen aus der Fixture | Integration |
@@ -119,13 +119,15 @@ Entscheidung des Nutzers: kritische Module 90 %, Rest 70 %.
 
 | Modul | Ziel Zeilen | Ziel Zweige |
 |---|---|---|
-| `src/sevdesk/mapper.ts` | 90 % | 90 % |
+| `src/sevdesk/mapper.ts` (liegt in `src/analytics/index.ts`) | 90 % | 90 % |
 | `src/analytics/` | 90 % | 90 % |
 | `src/redact/` | 90 % | 90 % |
 | `src/sevdesk/client.ts` | 70 % | 70 % |
 | `src/tools.ts`, `src/server.ts`, `src/main.ts` | 70 % | 70 % |
 
-Die Schwellen werden in der Vitest-Konfiguration pro Datei gesetzt, damit der Build bricht, wenn sie unterschritten werden.
+Die Schwellen werden in `vitest.config.ts` pro Datei gesetzt, `npm test` läuft mit Coverage und bricht bei Unterschreitung. `src/main.ts` ist ausgenommen (reine Startverdrahtung). Er wird vor jedem Release per stdio-Start geprüft, siehe Abschnitt 8.
+
+Stand: alle Module über 96 % Zeilen, Auswertungen und Mapper 100 % Zeilen und 97 % Zweige.
 
 ## 5. Lücken gegenüber dem Lexware-Connector
 
@@ -152,7 +154,7 @@ Für sevDesk fehlen alle Tests, weil noch kein Code existiert. Die Gaps beziehen
 | T-08 | Analytics | Teilzahlung ohne `paidAmount` | Aging | Hinweis, kein Restbetrag |
 | T-09 | Redaktion | Name `Anna Demo` mehrfach | Pseudonymisieren | Gleicher Platzhalter |
 | T-10 | Redaktion | `SEVDESK_REDACT=0` | Mapping mit Bankdaten | Bankdaten fehlen trotzdem |
-| T-11 | Tools | Alle Tool-Schemata | Protokoll-Test | Zehn Tools, alle `readOnlyHint` |
+| T-11 | Tools | Alle Tool-Schemata | Protokoll-Test | Sieben Tools, alle `readOnlyHint` |
 | T-12 | Integration | Replay mit drei Seiten | Rechnungsliste | Alle Belege, keine Dubletten |
 | T-13 | Integration | Replay ohne Paging-Unterstützung | Rechnungsliste | Hinweis auf Lücke |
 | T-14 | Live | Testkonto, Schreibrechte nicht genutzt | `live-check` | Ausgabe ohne Namen, Exit 0 |
@@ -168,7 +170,9 @@ Für sevDesk fehlen alle Tests, weil noch kein Code existiert. Die Gaps beziehen
 
 | Befehl | Zweck | Wann |
 |---|---|---|
-| `npm test` | Unit und Integration, Coverage mit Schwellen | jeder Build, CI |
+| `npm test` | Unit, Integration (Replay), Protokoll, Coverage mit Schwellen | jeder Build, CI |
+| `npm run test:quick` | wie oben ohne Coverage | lokal |
+| stdio-Smoke | `node dist/main.js` starten, per MCP-Client Tool-Liste und zwei Tools aufrufen (mit Token); ohne Token muss der Start mit Meldung und Exit 1 enden | vor jedem Release, lokal |
 | `npm run typecheck` | Typprüfung | jeder Build, CI |
 | `node scripts/live-check.mjs` | Live gegen Testkonto | manuell, lokal |
 
@@ -178,8 +182,15 @@ Live-Tests laufen nicht in CI. Das Token bleibt beim Nutzer, es wird nie als CI-
 
 | Punkt (DESIGN.md, Abschnitt 9) | Test, der davon abhängt | Was jetzt gilt |
 |---|---|---|
-| V4 Paging auf `GET /Invoice` | T-12, T-13 | Beide Zweige testen, bis der Live-Test entscheidet |
+| V4 Paging auf `GET /Invoice` | T-12, T-13 | **Belegt** (offset und countAll funktionieren). T-13 entfällt, der Client setzt `limit` immer explizit |
 | V3 Ratenlimit | T-01 | Backoff mit angenommenen Werten, Anpassung nach Messung |
-| V6 Einheit der Datumsfilter | Datumstest im Mapper | Beide Formate testen, Ambiguität wird abgelehnt |
-| V7 `paidAmount` bei Altfällen | T-08 | Beide Fälle abgedeckt |
+| V6 Einheit der Datumsfilter | Datumstest in `tools.ts` | **Belegt: Sekunden.** Test prüft Unix-Sekunden mit einem Tag Spielraum |
+| V7 `paidAmount` bei Altfällen | T-08 | Beide Fälle abgedeckt. Gutschriften haben nie `paidAmount` |
 | V8 Storno | in v0.1 ausgeschlossen, Test prüft den Hinweis | Storno-Tests kommen mit v0.3 |
+
+## 10. Abweichungen von der ursprünglichen Planung
+
+- Statuswerte und Typen werden in `analytics/index.ts` zusammen mit dem Mapper getestet (Tabellen in `test/hardening.test.ts`). Kein eigenes `mapper.ts`.
+- Beträge, die fehlen oder nicht numerisch sind, führen zu einem Fehler statt zu 0. Das gilt auch für ungültige Belegdaten.
+- Keine Fixture-Aufzeichnungen aus dem Testkonto im Repo. Der Replay-Server liefert synthetische Belege in der Form der Live-Antworten (Summen als Zeichenketten, ISO-Datum mit Zeitzone). So bleiben Testkontodaten aus dem Repo heraus.
+- Zwei Steuer-Modi (1.0 und 2.0) sind nicht getestet: Der Connector liest die Steuer ausschließlich aus den Positionen (`taxRate` je Position, Modus 2.0). Ein Konto mit Update 1.0 ist am Testkonto nicht prüfbar und bleibt eine bekannte Lücke.
