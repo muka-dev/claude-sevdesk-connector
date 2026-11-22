@@ -2,7 +2,8 @@
 
 ## Die Tools `sevdesk_*` erscheinen nicht
 
-- Pfad zu `dist/main.js` in der Konfiguration prüfen. Es muss vorher `npm run build` gelaufen sein.
+- Der Eintrag muss `npx` mit den Argumenten `-y` und `claude-sevdesk-connector` nennen. Beim ersten Start lädt `npx` das Paket, das braucht Netz und etwas Zeit.
+- Bei einer Installation aus dem Quellcode: Pfad zu `dist/main.js` prüfen, vorher muss `npm run build` gelaufen sein.
 - Node.js 22 oder neuer ist nötig (`node -v`).
 - Claude Desktop nach jeder Änderung der Konfiguration neu starten.
 - Beim Start mit fehlendem Token bricht der Connector ab: `sevDesk API token is missing. Set SEVDESK_TOKEN.`
