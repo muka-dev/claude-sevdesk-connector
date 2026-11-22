@@ -6,7 +6,8 @@ Adressen verwenden die reservierte Domain example.com, USt-IdNr. und
 Steuernummern haben ein erkennbares Muster und sind keine echten Nummern.
 
 Aufruf:  python3 testdata/generate_contacts.py
-Ergebnis: testdata/contacts-import.csv (UTF-8 mit BOM, Trennzeichen ";")
+Ergebnis: testdata/contacts-import.csv (UTF-8 ohne BOM, Trennzeichen ";",
+          Spalten exakt wie die sevDesk-Kontaktvorlage)
 """
 
 import csv
@@ -18,22 +19,25 @@ ROWS_ORG = 150
 ROWS_PERSON = 90
 OUT = Path(__file__).resolve().parent / "contacts-import.csv"
 
+# Kopfzeile exakt wie die Kontakt-Vorlage von sevDesk (contact-template_de_DE.csv):
+# 37 Spalten, Semikolon, ohne BOM. Die Datensätze füllen nur einen Teil der Spalten.
 HEADER = [
-    "Kundennummer",
-    "Organisation",
-    "Vorname",
-    "Nachname",
-    "Kategorie",
-    "Strasse",
-    "PLZ",
-    "Ort",
-    "Land",
-    "E-Mail",
-    "Telefon",
-    "USt-IdNr",
-    "Steuernummer",
-    "Notiz",
+    "Kunden-Nr.", "Anrede", "Titel", "Nachname", "Vorname", "Organisation",
+    "Namenszusatz", "Position", "Kategorie", "IBAN", "BIC", "Umsatzsteuer-ID",
+    "Strasse", "PLZ", "Ort", "Land", "Adress-Kategorie", "Telefon",
+    "Telefon-Kategorie", "Mobil", "Fax", "E-Mail", "E-Mail-Kategorie",
+    "Webseite", "Webseiten-Kategorie", "Beschreibung", "Geburtstag", "Tags",
+    "Debitoren-Nr", "Kreditoren-Nr.", "Leitweg-ID / Leitwegsnummer",
+    "Steuernummer", "Skonto Tage", "Skonto Prozent", "Zahlungsziel Tage",
+    "Kundenrabatt", "Ist Kundenrabatt prozentual",
 ]
+
+# Interne Feldnamen im Generator → Spaltennamen der Vorlage.
+TO_TEMPLATE = {
+    "Kundennummer": "Kunden-Nr.",
+    "USt-IdNr": "Umsatzsteuer-ID",
+    "Notiz": "Beschreibung",
+}
 
 FIRST = ["Anna", "Ben", "Clara", "David", "Emma", "Felix", "Greta", "Hannes",
          "Ilse", "Jonas", "Karla", "Lukas", "Mila", "Nico", "Ole", "Petra",
@@ -131,7 +135,7 @@ def build_rows(rng):
         })
     for e in EDGE:
         n += 1
-        base = {k: "" for k in HEADER}
+        base = {k: "" for k in TO_TEMPLATE}
         base.update({"Kundennummer": f"TK-{n:05d}", "Land": "Deutschland",
                      "Strasse": "Musterweg 1", "E-Mail": f"edge{n}@example.com",
                      "Telefon": phone(rng)})
@@ -144,11 +148,17 @@ def main():
     rng = random.Random(SEED)
     rows = build_rows(rng)
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    with OUT.open("w", encoding="utf-8-sig", newline="") as fh:
+    out_rows = []
+    for row in rows:
+        out = {h: "" for h in HEADER}
+        for key, value in row.items():
+            out[TO_TEMPLATE.get(key, key)] = value
+        out_rows.append(out)
+    with OUT.open("w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=HEADER, delimiter=";",
                            quoting=csv.QUOTE_MINIMAL)
         w.writeheader()
-        w.writerows(rows)
+        w.writerows(out_rows)
     print(f"{len(rows)} Kontakte geschrieben: {OUT}")
 
 
