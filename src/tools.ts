@@ -104,6 +104,7 @@ export function buildTools(ctx: ToolContext): ToolDef[] {
       inputSchema: { id: z.string().regex(/^\d+$/) },
       handler: async (a) => {
         const inv = await ctx.client.get<{ objects: any[] }>(`/Invoice/${a.id}`);
+        if (!inv.objects?.[0]) throw new Error(`Invoice ${a.id} not found`);
         const doc = mapDoc(inv.objects[0], "invoice");
         return { ...doc, positions: (await detail(doc)).positions };
       },

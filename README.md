@@ -108,7 +108,7 @@ Details und bekannte Lücken: [docs/SECURITY-PRIVACY.md](docs/SECURITY-PRIVACY.m
 
 ```bash
 npm install
-npm test          # Unit-Tests, ohne API und ohne Netz
+npm test          # Unit-, Replay- und Protokolltests mit Coverage-Schwellen, ohne API und ohne Netz
 npm run typecheck
 npm run build
 ```

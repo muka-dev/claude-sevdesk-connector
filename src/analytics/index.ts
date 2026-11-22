@@ -23,15 +23,24 @@ const round2 = (n: number) => Math.round(n * 100) / 100;
 
 /** Whitelist mapper: only these fields ever leave the connector. Sums arrive as strings. */
 export function mapDoc(o: any, kind: Kind): Doc {
+  // Reject instead of guessing: a missing or non-numeric amount must never count as 0.
+  const gross = typeof o.sumGross === "string" || typeof o.sumGross === "number" ? Number(o.sumGross) : NaN;
+  if (!Number.isFinite(gross) || (typeof o.sumGross === "string" && o.sumGross.trim() === "")) {
+    throw new Error(`Invalid amount on ${kind} ${String(o.id)}`);
+  }
+  const rawDate = kind === "invoice" ? o.invoiceDate : o.creditNoteDate;
+  if (typeof rawDate !== "string" || !/^\d{4}-\d{2}-\d{2}/.test(rawDate)) {
+    throw new Error(`Invalid date on ${kind} ${String(o.id)}`);
+  }
   return {
     id: String(o.id),
     kind,
     type: kind === "invoice" ? o.invoiceType : undefined,
     status: Number(o.status),
     number: (kind === "invoice" ? o.invoiceNumber : o.creditNoteNumber) ?? null,
-    date: String(kind === "invoice" ? o.invoiceDate : o.creditNoteDate).slice(0, 10),
+    date: rawDate.slice(0, 10),
     timeToPay: o.timeToPay == null ? null : Number(o.timeToPay),
-    gross: Number(o.sumGross),
+    gross,
     paid: o.paidAmount == null ? null : Number(o.paidAmount),
     contactId: o.contact?.id != null ? String(o.contact.id) : null,
   };
