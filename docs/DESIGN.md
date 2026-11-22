@@ -236,7 +236,7 @@ Fehlermeldungen enthalten nur Status und Pfad, nie den Antworttext, wie bei Lexw
 
 | Bereich | Tool | Entspricht Lexware | Hinweis |
 |---|---|---|---|
-| Stammdaten | `sevdesk_profile` | `lexware_profile` | Parität zu Lexware. Inhalt: Buchungsversion, Kleinunternehmer-Status, Kontokennung. Firmenname nur, wenn Endpunkt in V10 belegt ist |
+| Stammdaten | `sevdesk_profile` | `lexware_profile` | Parität zu Lexware. Quelle: `GET /SevClient` (Whitelist, siehe 7.2) plus `GET /Tools/bookkeepingSystemVersion` |
 | | `sevdesk_search_contacts` | `lexware_search_contacts` | Namenssuche **lokal** über die Kontaktliste, da kein Namensfilter existiert |
 | | `sevdesk_get_contact` | `lexware_get_contact` | |
 | | `sevdesk_search_articles` | `lexware_search_articles` | `GET /Part` mit `partNumber` oder `name` |
@@ -247,7 +247,7 @@ Fehlermeldungen enthalten nur Status und Pfad, nie den Antworttext, wie bei Lexw
 | | `sevdesk_customer_concentration` | `lexware_customer_concentration` | |
 | | `sevdesk_vat_summary` | `lexware_vat_summary` | Positionen je Rechnung nötig |
 
-**Entscheidung (Nutzer, Punkt 2):** v0.1 hat mindestens den Umfang des Lexware-Connectors. Deshalb gibt es `sevdesk_profile`. Die Spezifikation enthält keinen GET-Endpunkt für das Firmenprofil. Ob einer existiert, prüft V10 am Testkonto. Ohne Endpunkt liefert das Tool nur die belegten Angaben: Buchungsversion, Kleinunternehmer-Status aus `smallSettlement` und die Client-ID aus dem Feld `sevClient` der Rechnungen. Der Firmenname wird nicht ausgegeben, solange kein Endpunkt bekannt ist. Begründung: Firmendaten sind personenbezogen und würden die Redaktion umgehen.
+**Entscheidung (Nutzer, Punkt 2):** v0.1 hat mindestens den Umfang des Lexware-Connectors, also mit `sevdesk_profile`. Die Spezifikation nennt keinen Profil-Endpunkt, am Testkonto antwortet aber `GET /SevClient` mit HTTP 200 (V10). Das Tool nutzt nur die Whitelist aus 7.2. Der Endpunkt ist nicht zugesichert, deshalb prüft der Connector bei jedem Start, ob `SevClient` antwortet, und meldet andernfalls „Profil derzeit nicht verfügbar“, statt die Auswertungen zu blockieren.
 
 ### 6.2 Kontaktsuche ohne Namensfilter
 
@@ -342,6 +342,20 @@ Der Mapper übernimmt nur Felder aus einer festen Liste. Neue Felder der API fli
 
 **Übernommen (reduziert):** Kontakt `customerNumber`, `status`, `category`-Name; Rechnung `id`, Typ, Status, Datum, Summen, `paidAmount`, `smallSettlement`, `contact.id`; Position `taxRate`, `priceNet`, `priceTax`.
 
+**Profil (`SevClient`, belegt am Testkonto):**
+
+| Feld | Behandlung | Begründung |
+|---|---|---|
+| `name` | ausgeben, **nur wenn kein `@` enthalten** | Am Testkonto steht hier die Login-E-Mail-Adresse |
+| `formOfCompany`, `smallSettlement`, `defaultCurrency`, `invoiceTimeToPay`, `showNet` | ausgeben | nicht personenbezogen, für Auswertungen relevant |
+| `taxNumber`, `vatNumber`, `companyRegister`, `districtCourt` | entfernen | Steuer- und Registerdaten |
+| `bankIban`, `bankBic`, `bankAccountNumber`, `bankNumber`, `bank`, `bank2`, `paypalEmail`, `figoUsername` | entfernen | Finanzdaten |
+| `addressStreet`, `addressZip`, `addressCity`, `addressCountry`, `nameAddition` | entfernen | Anschrift |
+| `contactEmail`, `contactPhone`, `contactFax`, `website`, `ceoName` | entfernen | Kontakt- und Personendaten |
+| alle übrigen Felder (Druck, Vorlagen, Abo, Partner, Onboarding) | entfernen | nicht benötigt |
+
+**Import-Befund (Testkonto):** Der CSV-Import hat die Spalten fehlerhaft zugeordnet. `Strasse` landete in `name`, `PLZ` in `name2`, `E-Mail` in `bankAccount`, `Kategorie` in `surename`, und die Organisationsnamen fehlen. Die Kundennummern stimmen. Das ist ein Fehler der Zuordnung im Assistenten und kein Fehler der API. Für den Mapper bedeutet das: Die Whitelist muss mit falsch befüllten Feldern umgehen, und Auswertungen dürfen sich nicht auf Feldinhalte stützen, die nur die Spalte gesetzt hat.
+
 ### 7.3 Token
 
 - Das Token ist ein Schlüssel für das gesamte Konto **[belegt: lebt, solange der Benutzer existiert]**. Es steht im `env`-Block der Claude-Konfiguration, im Klartext wie bei Lexware.
@@ -371,7 +385,7 @@ Die Spezifikation und Doku klären viel. Verbleibende Punkte brauchen ein Testko
 
 | # | Prüfpunkt | Status | Methode |
 |---|---|---|---|
-| V0 | Credential-Format am Proxy | **blockiert**: beim Speichern wurde Präfix `Token` gesetzt. sevDesk erwartet den reinen Wert ohne Präfix. Korrektur in den Umgebungs-Secrets durch den Nutzer nötig | Testaufruf `GET /Tools/bookkeepingSystemVersion` nach Korrektur |
+| V0 | Credential-Format am Proxy | **erledigt**: nach Neusetzung des Secrets antwortet `GET /Tools/bookkeepingSystemVersion` mit HTTP 200. Der Wert ohne Präfix funktioniert | – |
 | V1 | Basis-URL | **belegt** | Doku, Spezifikation |
 | V2 | Header-Format (ohne Bearer) | **belegt**, Live-Bestätigung offen | Testaufruf mit und ohne Präfix |
 | V3 | Ratenlimit, Verhalten bei Überschreitung | offen, nicht dokumentiert | kontrollierte Aufrufreihe, Header prüfen |
@@ -381,8 +395,8 @@ Die Spezifikation und Doku klären viel. Verbleibende Punkte brauchen ein Testko
 | V7 | `paidAmount` bei Altfällen (vor Juni 2024) | offen | Testkonto mit altem Datenstand, falls vorhanden |
 | V8 | Stornierung: Status der Quellrechnung nach SR | offen | Stornorechnung im Testkonto anlegen, Liste prüfen |
 | V9 | Verhalten bei fehlendem Paging-Parameter | offen | nach V4 |
-| V10 | Existenz eines Firmenprofil-Endpunkts | offen, nach V0 | Testaufruf `GET /SevClient` und `GET /SevUser` mit gültigem Token. Ohne Treffer: Profil nur mit belegten Angaben (siehe 6.1) |
-| V11 | Steuer-Modus des Testkontos (1.0 oder 2.0) | offen | `GET /Tools/bookkeepingSystemVersion` |
+| V10 | Existenz eines Firmenprofil-Endpunkts | **teilweise belegt**: `GET /SevClient` antwortet mit HTTP 200 und liefert das Kontoprofil. Der Endpunkt steht **nicht** in der Spezifikation, daher ist sein Verhalten (Stabilität, Felder, Versionierung) nicht zugesichert. `GET /SevUser` existiert ebenfalls, wird aber nicht verwendet (Login- und Personendaten) |
+| V11 | Steuer-Modus des Testkontos (1.0 oder 2.0) | **belegt: 2.0** | `GET /Tools/bookkeepingSystemVersion` liefert `{"version":"2.0"}`. Der Update-1.0-Pfad bleibt im Mapper, ist aber am Testkonto nicht prüfbar |
 | V12 | Kleinunternehmer-Konto: `smallSettlement` und Positionen | offen | Testkonto mit passender Einstellung |
 | V13 | Zugriff nur für bestimmte Tarife | offen | Testkonto, Doku der Preisseite prüfen |
 | V14 | `tech.sevdesk.com` (API-News) | offen | Zugriff nicht möglich, Inhalte nachholen |
